@@ -1,0 +1,10 @@
+{
+  "-W014": true,
+  "-W030": true,
+  "-W097": true,
+  "globals": {
+    "module": false,
+    "process": false,
+    "require": false
+  }
+}
