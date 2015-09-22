@@ -1,6 +1,7 @@
 const
   _URL__GRUNT_CONFIG_FILE = './config/grunt.json',
-  _URL__NPM_MANIFEST_FILE = './package.json';
+  _URL__NPM_MANIFEST_FILE = './package.json',
+  _URL__SRC_DIRECTORY = './src';
 
 var
   gruntRegisterTasks = require('grunt-register-tasks'),
@@ -22,6 +23,14 @@ module.exports = function ( $grunt ) {
         ],
 
       _config = {
+          'alias': {
+              'src': [
+                  '<%= cfg.PATH__SRC %>/<%= cfg.GLOB__JS__RECURSIVE %>'
+                ],
+              'options': {
+                  'levels': 1
+                }
+            },
           'bump': {
               'options': {
                   'commit': true,
@@ -74,6 +83,10 @@ module.exports = function ( $grunt ) {
           'default': [
               'jsonlint',
               'jshint'
+            ],
+          'test': [
+              'default',
+              'alias'
             ]
         };
 
@@ -88,6 +101,8 @@ module.exports = function ( $grunt ) {
         scope: 'devDependencies'
       }
     ),
+
+    $grunt.loadTasks( _URL__SRC_DIRECTORY ),
 
     gruntRegisterTasks(
       $grunt,
