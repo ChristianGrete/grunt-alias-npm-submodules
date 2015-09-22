@@ -48,8 +48,8 @@ module.exports = function ( $grunt ) {
             },
           'jsonlint': {
               'config': [
-                  '<%= cfg.PATH__CONFIG %>/<%= cfg.GLOB__JSON__RECURSIVE %>'/* ,
-                  '<%= cfg.PATH__ROOT %>/<%= cfg.GLOB__JSHINTRC %>' */
+                  '<%= cfg.PATH__CONFIG %>/<%= cfg.GLOB__JSON__RECURSIVE %>',
+                  '<%= cfg.PATH__ROOT %>/<%= cfg.GLOB__JSHINTRC %>'
                 ],
               'manifest': _URL__NPM_MANIFEST_FILE
             },
