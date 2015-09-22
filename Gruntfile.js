@@ -18,6 +18,7 @@ module.exports = function ( $grunt ) {
       _plugins = [
           'grunt-bump',
           'grunt-contrib-*',
+          'grunt-exec',
           'grunt-jsonlint',
           'grunt-modify-json'
         ],
