@@ -1,0 +1,4 @@
+{
+  "GLOB__JS__RECURSIVE": "**/*.js",
+  "PATH__TASKS": "./tasks"
+}
