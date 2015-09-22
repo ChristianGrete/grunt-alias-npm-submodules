@@ -1,4 +1,5 @@
 {
+  "GLOB__GRUNT_ALIAS_NPM_SUBMODULES_JS": "grunt-alias-npm-submodules.js",
   "GLOB__JS__RECURSIVE": "**/*.js",
   "GLOB__JSHINTRC": ".jshintrc",
   "GLOB__JSON__RECURSIVE": "**/*.json",
