@@ -24,9 +24,7 @@ module.exports = function ( $grunt ) {
 
       _config = {
           'alias': {
-              'src': [
-                  '<%= cfg.PATH__SRC %>/<%= cfg.GLOB__JS__RECURSIVE %>'
-                ],
+              'src': '<%= cfg.PATH__SRC %>/<%= cfg.GLOB__JS__RECURSIVE %>',
               'options': {
                   'levels': 1
                 }
@@ -49,6 +47,9 @@ module.exports = function ( $grunt ) {
                 }
             },
           'cfg': _$grunt__file__readJSON( _URL__GRUNT_CONFIG_FILE ),
+          'clean': {
+              'alias': '<%= cfg.PATH__ROOT %>/<%= cfg.GLOB__GRUNT_ALIAS_NPM_SUBMODULES_JS %>'
+            },
           'jshint': {
               'options': {
                   'jshintrc': true
@@ -86,7 +87,8 @@ module.exports = function ( $grunt ) {
             ],
           'test': [
               'default',
-              'alias'
+              'alias',
+              'clean:alias'
             ]
         };
 
