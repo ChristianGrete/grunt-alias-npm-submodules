@@ -3,7 +3,7 @@
   "GLOB__JSHINTRC": ".jshintrc",
   "GLOB__JSON__RECURSIVE": "**/*.json",
   "PATH__CONFIG": "./config",
-  "PATH__ROOT": "./",
+  "PATH__ROOT": ".",
   "PATH__SRC": "./src",
   "PATH__TASKS": "./tasks"
 }
