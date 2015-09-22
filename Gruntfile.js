@@ -48,7 +48,20 @@ module.exports = function ( $grunt ) {
             },
           'cfg': _$grunt__file__readJSON( _URL__GRUNT_CONFIG_FILE ),
           'clean': {
-              'alias': '<%= cfg.PATH__ROOT %>/<%= cfg.GLOB__GRUNT_ALIAS_NPM_SUBMODULES_JS %>'
+              'alias': '<%= cfg.PATH__ROOT %>/<%= cfg.GLOB__GRUNT_ALIAS_NPM_SUBMODULES_JS %>',
+              'tasks': '<%= cfg.PATH__TASKS %>'
+            },
+          'copy': {
+              'src': {
+                  'cwd': '<%= cfg.PATH__SRC %>',
+                  'dest': '<%= cfg.PATH__TASKS %>',
+                  'expand': true,
+                  'src': '<%= cfg.GLOB__JS__RECURSIVE %>'
+                }
+            },
+          'exec': {
+              'commit': 'git commit -m "release(v<%= pkg.version %>): distribute"',
+              'tag': 'git tag -a v<%= pkg.version %> -m "<%= grunt.option(\'tagMessage\') %>"'
             },
           'jshint': {
               'options': {
@@ -80,7 +93,10 @@ module.exports = function ( $grunt ) {
         },
 
       _tasks = {
-          'build': [],
+          'build': [
+              'clean',
+              'copy'
+            ],
           'default': [
               'jsonlint',
               'jshint'
