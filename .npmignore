@@ -8,3 +8,4 @@ bin/
 config/
 Gruntfile.js
 npm-debug.log
+src/
