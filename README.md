@@ -51,7 +51,7 @@ Result:
 .
 ├── submodule.js # The alias file
 └── level_1/
-    ├── level_2/
+    └── level_2/
         └── submodule.js
 ```
 When changing `options.levels` to `1`, the result will be:
@@ -60,7 +60,7 @@ When changing `options.levels` to `1`, the result will be:
 ├── level_2 # The alias subdirectory
 │   └── submodule.js # The alias file
 └── level_1/
-    ├── level_2/
+    └── level_2/
         └── submodule.js
 ```
 
