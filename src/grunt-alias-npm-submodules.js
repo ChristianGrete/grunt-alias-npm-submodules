@@ -32,12 +32,12 @@ module.exports = function ( $grunt ) {
 
       $grunt.log.writeln(
         'Create forwarding from '
-          + _fileDest['cyan']
+          + _fileDest.cyan
           + ' to '
           + (
               './'
                 + _fileSrc
-            )['cyan']
+            ).cyan
           + ' ...'
       ),
 
@@ -129,7 +129,7 @@ module.exports = function ( $grunt ) {
 
             $grunt.log.ok(
               'Successfully aliased '
-                + String( _count )['green']
+                + String( _count ).green
                 + ' npm module'
                 + (
                     _count === 1 ?
