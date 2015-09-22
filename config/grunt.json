@@ -1,5 +1,6 @@
 {
   "GLOB__JS__RECURSIVE": "**/*.js",
+  "PATH__ROOT": "./",
   "PATH__SRC": "./src",
   "PATH__TASKS": "./tasks"
 }
