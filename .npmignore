@@ -6,6 +6,8 @@
 .tm_properties
 bin/
 config/
+grunt-alias-npm-submodules.js
+!tasks/grunt-alias-npm-submodules.js
 Gruntfile.js
 npm-debug.log
 src/
