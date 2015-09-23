@@ -31,14 +31,13 @@ module.exports = function ( $grunt ) {
       }
 
       $grunt.log.writeln(
-        'Create forwarding from '
+        'Create forwarding ...\r\n\n* From: '
           + _fileDest.cyan
-          + ' to '
+          + '\r\n* To:   '
           + (
               './'
                 + _fileSrc
             ).cyan
-          + ' ...'
       ),
 
       $grunt.file.write(
