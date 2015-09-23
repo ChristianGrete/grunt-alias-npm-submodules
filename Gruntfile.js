@@ -27,7 +27,7 @@ module.exports = function ( $grunt ) {
           'alias': {
               'src': '<%= cfg.PATH__SRC %>/<%= cfg.GLOB__JS__RECURSIVE %>',
               'options': {
-                  'levels': 1
+                  'levels': 2
                 }
             },
           'bump': {
