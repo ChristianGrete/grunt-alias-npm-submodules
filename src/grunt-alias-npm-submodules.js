@@ -131,7 +131,7 @@ module.exports = function ( $grunt ) {
               return $grunt.log.ok(
                   'Successfully aliased '
                     + String( _count ).green
-                    + ' npm module'
+                    + ' npm (sub-)module'
                     + (
                         _count === 1 ?
                           '' : 's'
