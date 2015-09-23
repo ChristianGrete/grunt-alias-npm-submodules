@@ -31,13 +31,14 @@ module.exports = function ( $grunt ) {
       }
 
       $grunt.log.writeln(
-        'Create forwarding ...\r\n\n* From: '
+        'Create forwarding ...\r\n* From: '
           + _fileDest.cyan
           + '\r\n* To:   '
           + (
               './'
                 + _fileSrc
             ).cyan
+          + '\r\n'
       ),
 
       $grunt.file.write(
@@ -118,27 +119,29 @@ module.exports = function ( $grunt ) {
 
                 _parsedPath.full = $file,
 
-                _writeAliasFile( _parsedPath ),
+                _writeAliasFile(
+                  _parsedPath
+                ),
 
                 _count ++;
               }
-            ),
-
-            $grunt.log.writeln(),
-
-            $grunt.log.ok(
-              'Successfully aliased '
-                + String( _count ).green
-                + ' npm module'
-                + (
-                    _count === 1 ?
-                      '' : 's'
-                  )
-                + '.'
             );
-          } else {
-            $grunt.log.error('No files were aliased');
+
+            if( _count > 0 ) {
+              return $grunt.log.ok(
+                  'Successfully aliased '
+                    + String( _count ).green
+                    + ' npm module'
+                    + (
+                        _count === 1 ?
+                          '' : 's'
+                      )
+                    + '.'
+                );
+            }
           }
+
+          $grunt.log.error('No files were aliased');
         }
       );
 
