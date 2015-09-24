@@ -94,7 +94,8 @@ module.exports = function ( $grunt ) {
                       'add': true,
                       'fields': {
                           'private': false
-                        }
+                        },
+                      'indent': 2
                     }
                 }
             },
