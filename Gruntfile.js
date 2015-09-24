@@ -57,7 +57,7 @@ module.exports = function ( $grunt ) {
             },
           'cfg': _$grunt__file__readJSON( _URL__GRUNT_CONFIG_FILE ),
           'clean': {
-              'alias': '<%= cfg.PATH__ROOT %>/<%= cfg.GLOB__GRUNT_ALIAS_NPM_SUBMODULES_JS %>',
+              'alias': '<%= cfg.PATH__ROOT %>/<%= cfg.FILE__GRUNT_ALIAS_NPM_SUBMODULES_JS %>',
               'tasks': '<%= cfg.PATH__TASKS %>'
             },
           'copy': {
@@ -81,7 +81,7 @@ module.exports = function ( $grunt ) {
           'jsonlint': {
               'config': [
                   '<%= cfg.PATH__CONFIG %>/<%= cfg.GLOB__JSON__RECURSIVE %>',
-                  '<%= cfg.PATH__ROOT %>/<%= cfg.GLOB__JSHINTRC %>'
+                  '<%= cfg.PATH__ROOT %>/<%= cfg.FILE__JSHINTRC %>'
                 ],
               'manifest': _URL__NPM_MANIFEST_FILE
             },

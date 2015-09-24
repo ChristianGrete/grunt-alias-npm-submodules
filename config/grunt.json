@@ -1,7 +1,7 @@
 {
-  "GLOB__GRUNT_ALIAS_NPM_SUBMODULES_JS": "grunt-alias-npm-submodules.js",
+  "FILE__GRUNT_ALIAS_NPM_SUBMODULES_JS": "grunt-alias-npm-submodules.js",
+  "FILE__JSHINTRC": ".jshintrc",
   "GLOB__JS__RECURSIVE": "**/*.js",
-  "GLOB__JSHINTRC": ".jshintrc",
   "GLOB__JSON__RECURSIVE": "**/*.json",
   "PATH__CONFIG": "./config",
   "PATH__ROOT": ".",
