@@ -17,7 +17,8 @@
   ],
   "description": "Alias npm submodules located in subdirectories",
   "dependencies": {
-    "path-is-absolute": "^1.0.0"
+    "path-is-absolute": "^1.0.0",
+    "path-parse": "^1.0.5"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
