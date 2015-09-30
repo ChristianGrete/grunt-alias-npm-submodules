@@ -5,6 +5,10 @@ var
   path = require('path'),
   DIRECTORY_SEPARATOR = path.sep;
 
+if( typeof path.isAbsolute !== 'function' ) {
+  path.isAbsolute = require('path-is-absolute');
+}
+
 module.exports = function ( $grunt ) {
 
     function _writeAliasFile ( $data ) {
