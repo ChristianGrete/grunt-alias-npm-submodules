@@ -71,5 +71,5 @@
     "type": "git",
     "url": "git://github.com/ChristianGrete/grunt-alias-npm-submodules.git"
   },
-  "version": "0.0.4"
+  "version": "0.0.5"
 }
