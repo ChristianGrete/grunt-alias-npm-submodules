@@ -9,6 +9,10 @@ if( typeof path.isAbsolute !== 'function' ) {
   path.isAbsolute = require('path-is-absolute');
 }
 
+if( typeof path.parse !== 'function' ) {
+  path.parse = require('path-parse');
+}
+
 module.exports = function ( $grunt ) {
 
     function _writeAliasFile ( $data ) {
