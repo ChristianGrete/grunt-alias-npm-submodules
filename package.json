@@ -65,7 +65,7 @@
     }
   ],
   "name": "grunt-alias-npm-submodules",
-  "private": true,
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git://github.com/ChristianGrete/grunt-alias-npm-submodules.git"
